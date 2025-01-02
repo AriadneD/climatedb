@@ -168,6 +168,33 @@ a.btn:hover, a.btn:active {
 #filter-btn:hover {
   background-color: #2980b9;
 }
+@media (max-width: 768px) {
+  .card {
+    width: auto; /* Full-width on smaller screens */
+    padding: 10px 10px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  #filters {
+    width: auto; /* Full-width on smaller screens */
+    padding: 10px 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+  #area-filter, #community-filter {
+    width: 100%;
+  }
+  #name-search {
+    margin-left: 0px;
+    width: 97%;
+  }
+  .inner {
+    padding: 10px !important;
+  }
+}
 </style>
 </head>
 <body>
