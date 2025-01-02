@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Climate Justice | Cambridge MA</title>
+<script src="https://kit.fontawesome.com/098b560adc.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-size: 14px;
+    font-family: "Open Sans";
+    background: url('bg.png');
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+}
+.nav {
+  width: auto;
+  text-align: center;
+}
+.nav h2 {
+  padding: 20px 0px 0px 0px;
+  font-weight: bold;
+}
+.nav .links {
+  padding: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.nav a {
+  text-decoration: none;
+  color: green;
+  transition: ease all .6s;
+}
+.nav a:hover {
+  text-decoration: none;
+  color: rgb(0, 68, 0);
+  transition: ease all .6s;
+}
+.inner {
+	padding: 40px;
+}
+h1 {
+	font-size: 36px;
+    color: black;
+    text-align: center;
+}
+h2 {
+	font-size: 20px;
+    font-weight: normal;
+    color: rgb(69, 69, 69);
+    text-align: center;
+}
+.card {
+    background: #eee;
+	line-height: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+.initiative-name {
+	color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.date-of-founding {
+	color: black;
+    font-size: 18px;
+}
+.target-community {
+	color: grey;
+}
+.focus-area {
+	color: white;
+    font-weight: 600;
+    background: #59b5a4; 
+    border-radius: 5px;
+    padding: 5px;
+}
+.contact-i {
+	color: black;
+    background: #eee; 
+    border-radius: 5px;
+    padding: 5px;
+}
+.contact-i a {
+	color: black;
+    text-decoration: none;
+    background: #eee; 
+    border-radius: 5px;
+    padding: 5px;
+}
+a.btn:link, a.btn:visited {
+    font-weight: normal;
+    border-radius: 5px;
+    padding: 12px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease all .6s;
+}
+a.btn:hover, a.btn:active {
+	padding: 15px 15px;
+    transition: ease all .6s;
+}
+.indigo {
+	background: #5433FF;
+    color: white;
+    border: 2px solid #5433FF;
+}
+.wht {
+	background: transparent;
+    color: #5433FF;
+    border: 2px solid #5433FF;
+}
+#filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin: 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+
+#filters label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#filters select,
+#filters input[type="text"] {
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-right: 10px;
+}
+
+#filters select:focus,
+#filters input[type="text"]:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 0 5px #3498db;
+}
+
+#filter-btn {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#filter-btn:hover {
+  background-color: #2980b9;
+}
+</style>
+</head>
+<body>
+  
+
+    <div class="inner">
+
+      <div class="nav">
+        <div>
+          <h2>🌎 BCDB</h2>
+        </div>
+        <div class="links">
+          <a href="/">Home</a>
+          <a href="/db.html">Database</a>
+          <a href="/map.html">Map</a>
+          <a href="/quiz.html">Quizzes</a>
+        </div>
+      </div>
+
+        <h1>Environmental Justice in Greater Cambridge MA</h1>
+        <h2>Showcasing local opportunities in an equitable, accessible, and open source manner.</h2>
+        <br/>
+        <div id="filters">
+          <label for="area-filter">Area:</label>
+          <select id="area-filter">
+            <option value="">All</option>
+            <option value="Environmental Justice">Environmental justice</option>
+            <option value="Renewable Energy">Renewable energy</option>
+            <option value="Affordable Housing">Affordable housing</option>
+            <option value="Transit">Transit</option>
+            <option value="Climate Policy">Climate policy</option>
+            <option value="Green Jobs">Green jobs</option>
+            <option value="Community Resilience">Community resilience</option>
+            <option value="Zero Waste">Zero waste</option>
+            <option value="Environmental Racism">Environmental racism</option>
+            <option value="Sustainable Food">Sustainable food</option>
+          </select>
+          <label for="community-filter">Community:</label>
+          <select id="community-filter">
+            <option value="">All</option>
+            <option value="Cambridge">Cambridge residents</option>
+            <option value="Boston">Boston residents</option>
+            <option value="Chelsea">Chelsea residents</option>
+            <option value="Lawrence">Lawrence residents</option>
+          </select>
+          <label for="name-search">Name:</label>
+          <input id="name-search" type="text" placeholder="Search by name">
+          <!--<button id="filter-btn">Filter</button>-->
+        </div>
+        <div id="cards-container"></div>
+      </div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+      <script>
+        // JSON file URL
+        const API_URL = "data.json";
+      
+        // Fetch data from JSON file
+        fetch(API_URL)
+          .then((response) => response.json())
+          .then((entries) => {
+            // Loop through each entry in the JSON data and create a card for each entry
+            entries.forEach((entry) => {
+              const {
+                name,
+                year,
+                area,
+                community,
+                description,
+                impact,
+                partners,
+                address,
+                email,
+                phone,
+                website,
+                opportunities,
+              } = entry;
+      
+              // Create a new card for this entry
+              const card = document.createElement("div");
+              card.className = "card";
+      
+              // Populate the card with the data from the JSON file
+              const content = `
+                <span class="initiative-name">${name}</span> | <span class="date-of-founding">est. ${year}</span><br/> 
+                <span class="focus-area">${area}</span><br/>
+                <span class="target-community">${community}</span><br/>
+                <div class="para">${description}</div>
+                <div class="para">${impact}</div>
+                <div class="para">${partners}</div><br/>
+                <span class="contact-i"><i class="fas fa-location-dot"></i> ${address}</span>
+                <span class="contact-i"><i class="fas fa-envelope"></i> <a href="mailto:${email}">${email}</a></span>
+                <span class="contact-i"><i class="fas fa-phone"></i> <a href="tel:${phone}">${phone}</a></span><br/><br/>
+                <a class="btn indigo" href="https://${website}" target="_blank">Website</a>
+                <a class="btn wht" href="https://${opportunities}" target="_blank">Opportunities</a>
+              `;
+      
+              // Add the content to the card
+              card.innerHTML = content;
+      
+              // Add the card to the cards container
+              const container = document.getElementById("cards-container");
+              container.appendChild(card);
+            });
+          })
+          .catch((error) => console.log(`Failed to load JSON data: ${error}`));
+      </script>
+      <script>
+        const areaFilter = document.getElementById("area-filter");
+        const communityFilter = document.getElementById("community-filter");
+        const nameSearch = document.getElementById("name-search");
+        const filterBtn = document.getElementById("filter-btn");
+
+        areaFilter.addEventListener("change", filterCards);
+        communityFilter.addEventListener("change", filterCards);
+        nameSearch.addEventListener("input", filterCards);
+        filterBtn.addEventListener("click", filterCards);
+
+        function filterCards() {
+        const area = areaFilter.value;
+        const community = communityFilter.value;
+        const name = nameSearch.value.toLowerCase();
+
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+            const cardArea = card.querySelector(".focus-area").textContent;
+            const cardCommunity = card.querySelector(".target-community").textContent;
+            const cardName = card.querySelector(".initiative-name").textContent.toLowerCase();
+
+            if (
+            (area === "" || cardArea === area) &&
+            (community === "" || cardCommunity.toLowerCase().includes(community.toLowerCase())) &&
+            (name === "" || cardName.includes(name))
+            ) {
+            card.style.display = "block";
+            } else {
+            card.style.display = "none";
+            }
+        });
+        }
+      </script>
+  </body>
+</html>
+

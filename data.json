@@ -1,0 +1,288 @@
+[
+  {
+    "name": "350 Mass",
+    "year": 2012,
+    "area": "Climate policy",
+    "community": "Massachusetts residents, with a focus on marginalized and frontline communities most affected by climate change and environmental injustice",
+    "description": "350 Mass is a grassroots organization dedicated to addressing the climate crisis in Massachusetts.",
+    "impact": "350 Mass has successfully advocated for policies that promote clean energy, reduce emissions, and protect communities from the impacts of climate change.",
+    "partners": [
+      "Sierra Club",
+      "Clean Water Action",
+      "Mass Climate Action Network",
+      "Mothers Out Front",
+      "Greenpeace",
+      "Sunrise Movement",
+      "Environmental League of Massachusetts"
+    ],
+    "address": "24 Roland St Suite 4C, Boston, MA 02129",
+    "email": "info@350mass.org",
+    "phone": "(857) 756-3933",
+    "website": "350mass.betterfutureproject.org/",
+    "opportunities": "350mass.betterfutureproject.org/take_action"
+  },
+  {
+    "name": "Extinction Rebellion Boston",
+    "year": 2018,
+    "area": "Environmental Justice",
+    "community": "Greater Boston",
+    "description": "Grassroots movement demanding action on climate emergency through nonviolent direct action and civil disobedience.",
+    "impact": "Organizes protests and actions to push for urgent and radical action on climate change.",
+    "partners": [
+      "Sunrise Boston",
+      "Climate Disobedience Center",
+      "Mothers Out Front",
+      "350 Massachusetts"
+    ],
+    "address": "N/A",
+    "email": "xrbostonmedia@gmail.com",
+    "phone": "N/A",
+    "website": "xrboston.org",
+    "opportunities": "xrboston.org/welcome/"
+  },
+  {
+    "name": "Sunrise Movement Boston",
+    "year": 2017,
+    "area": "Climate Policy",
+    "community": "Boston-area youth",
+    "description": "Youth-led movement advocating for ambitious and equitable climate action.",
+    "impact": "Mobilizes young people to demand climate action and has helped pass climate policies at local and national levels.",
+    "partners": [
+      "350 Mass for a Better Future",
+      "GreenRoots",
+      "Clean Water Action",
+      "Sierra Club MA Chapter"
+    ],
+    "address": "44 Oakes St. #1, Everett, MA 02149",
+    "email": "sunrisemovementboston@gmail.com",
+    "phone": "N/A",
+    "website": "sunrisemovement.org/boston",
+    "opportunities": "sunrisemovement.org/take-action/"
+  },
+  {
+    "name": "GreenRoots",
+    "year": 1996,
+    "area": "Environmental Justice",
+    "community": "Chelsea, East Boston, and beyond",
+    "description": "Grassroots organization working on environmental justice and community resilience in Chelsea and East Boston.",
+    "impact": "Empowers communities to fight for environmental justice and provides resources and education.",
+    "partners": [
+      "Chelsea Collaborative",
+      "Boston Climate Action Network",
+      "Clean Water Action"
+    ],
+    "address": "227 Marginal St, Suite 6, Chelsea, MA 02150",
+    "email": "info@greenrootschelsea.org",
+    "phone": "(617) 466-3070",
+    "website": "greenrootschelsea.org",
+    "opportunities": "greenrootschelsea.org/get-involved/"
+  },
+  {
+    "name": "Mothers Out Front",
+    "year": 2013,
+    "area": "Climate Policy",
+    "community": "Parents and families in MA",
+    "description": "Parent-led movement advocating for climate solutions.",
+    "impact": "Works to pass climate policies at local and state levels and trains and supports parent activists.",
+    "partners": [
+      "350 Massachusetts",
+      "Clean Water Action",
+      "Sierra Club MA Chapter"
+    ],
+    "address": "186 Hampshire St, Cambridge, MA 02139",
+    "email": "info@mothersoutfront.org",
+    "phone": "(857) 243-9461",
+    "website": "mothersoutfront.org",
+    "opportunities": "mothersoutfront.org/welcome/"
+  },
+  {
+    "name": "The Food Project",
+    "year": 1991,
+    "area": "Sustainable Food",
+    "community": "Youth in Greater Boston",
+    "description": "Empowers youth and promotes food equity and sustainability through urban agriculture.",
+    "impact": "Engages youth in sustainable agriculture, promotes food equity, and supports local food systems.",
+    "partners": [
+      "CitySprouts",
+      "Groundwork Somerville",
+      "Somerville Community Corporation"
+    ],
+    "address": "10 Lewis Street, Lincoln, MA 01773",
+    "email": "info@thefoodproject.org",
+    "phone": "(781) 259-8621",
+    "website": "thefoodproject.org",
+    "opportunities": "thefoodproject.org/get-involved/"
+  },
+  {
+    "name": "Boston Cyclists Union",
+    "year": 2010,
+    "area": "Transit",
+    "community": "Cyclists in Greater Boston",
+    "description": "Advocates for safe, bike-friendly streets and increased access to biking.",
+    "impact": "Works to make streets safe and accessible for cyclists, and promotes bicycling as a sustainable transportation option.",
+    "partners": [
+      "LivableStreets Alliance",
+      "WalkBoston",
+      "Massachusetts Vision Zero Coalition"
+    ],
+    "address": "375 Dudley St, Suite 100, Boston, MA 02119",
+    "email": "info@bostoncyclistsunion.org",
+    "phone": "(617) 752-9322",
+    "website": "bostoncyclistsunion.org",
+    "opportunities": "bostoncyclistsunion.org/takeaction"
+  },
+  {
+    "name": "Clean Water Action",
+    "year": 1972,
+    "area": "Environmental Justice",
+    "community": "MA residents",
+    "description": "National organization working to protect the environment and public health.",
+    "impact": "Works on issues such as clean water, climate change, and environmental justice through advocacy, organizing, and education.",
+    "partners": [
+      "Toxics Action Center",
+      "Environmental League of Massachusetts",
+      "Sierra Club MA Chapter"
+    ],
+    "address": "88 Broad St, Floor 5, Boston, MA 02110",
+    "email": "boston@cleanwater.org",
+    "phone": "(617) 338-8131",
+    "website": "cleanwater.org/massachusetts",
+    "opportunities": "cleanwater.org/take-action"
+  },
+  {
+    "name": "Green Energy Consumers Alliance",
+    "year": 1997,
+    "area": "Renewable Energy",
+    "community": "MA residents",
+    "description": "Nonprofit promoting renewable energy and energy efficiency through advocacy and consumer education.",
+    "impact": "Helps consumers access clean energy and advocates for policies that support clean energy and energy efficiency.",
+    "partners": [
+      "Mass Energy Consumers Alliance",
+      "Northeast Clean Energy Council",
+      "Vote Solar"
+    ],
+    "address": "31 Milk St, Suite 10, Boston, MA 02109",
+    "email": "info@greenenergyconsumers.org",
+    "phone": "(800) 287-3950",
+    "website": "greenenergyconsumers.org",
+    "opportunities": "greenenergyconsumers.org/events"
+  },
+  {
+    "name": "Mystic River Watershed Association",
+    "year": 1972,
+    "area": "Environmental Justice",
+    "community": "Communities along the Mystic River",
+    "description": "Works to protect and restore the Mystic River watershed through advocacy, education, and community engagement.",
+    "impact": "Improves water quality, restores habitats, and promotes recreational opportunities along the Mystic River.",
+    "partners": [
+      "Charles River Watershed Association",
+      "Friends of the Malden River",
+      "Chelsea Green Space Committee"
+    ],
+    "address": "20 Academy St, Suite 306, Arlington, MA 02476",
+    "email": "info@mysticriver.org",
+    "phone": "(781) 316-3438",
+    "website": "mysticriver.org",
+    "opportunities": "mysticriver.org/volunteer"
+  },
+  {
+    "name": "Home Energy Efficiency Team (HEET)",
+    "year": 2008,
+    "area": "Renewable Energy",
+    "community": "Low-income communities in Greater Boston",
+    "description": "Nonprofit promoting energy efficiency and renewable energy in low-income communities.",
+    "impact": "Helps households reduce energy use and costs, installs solar panels and other renewable energy systems, and advocates for pro-environment energy policies.",
+    "partners": [
+      "Boston Climate Action Network",
+      "Green Justice Coalition",
+      "Mass Energy Consumers Alliance"
+    ],
+    "address": "8 Newbury St, Somerville, MA 02144",
+    "email": "info@heetma.org",
+    "phone": "(617) HEET-672",
+    "website": "heetma.org",
+    "opportunities": "heet.org/careers/"
+  },
+  {
+    "name": "City Sprouts",
+    "year": 2001,
+    "area": "Sustainable Food",
+    "community": "Youth and families in Cambridge and Boston",
+    "description": "Nonprofit promoting urban agriculture, food education, and environmental stewardship.",
+    "impact": "Builds and maintains community gardens, provides food and garden education, and fosters community engagement around food and environmental issues.",
+    "partners": [
+      "The Food Project",
+      "Groundwork Somerville",
+      "Cambridge Public Schools"
+    ],
+    "address": "37 Berkshire St, Cambridge, MA 02141",
+    "email": "info@citysprouts.org",
+    "phone": "(617) 876-2436",
+    "website": "citysprouts.org",
+    "opportunities": "citysprouts.org/join-us"
+  },
+  {
+    "name": "TransitMatters",
+    "year": 2012,
+    "area": "Transit",
+    "community": "Greater Boston",
+    "description": "Advocacy group promoting sustainable and equitable transportation options in Greater Boston.",
+    "impact": "Conducts research and analysis, advocates for transit policies and investments, and engages the public and policymakers in discussions around transportation issues.",
+    "partners": [
+      "LivableStreets Alliance",
+      "Transportation for Massachusetts",
+      "Boston Cyclists Union"
+    ],
+    "address": "PO Box 542, Allston, MA 02134",
+    "email": "info@transitmatters.org",
+    "phone": "(617) 874-1080",
+    "website": "transitmatters.org",
+    "opportunities": "transitmatters.org/volunteer"
+  },
+  {
+    "name": "Boston Building Resources",
+    "year": 1978,
+    "area": "Affordable Housing",
+    "community": "Homeowners and renters in Greater Boston",
+    "description": "Nonprofit promoting sustainable and affordable housing through education, advocacy, and resources.",
+    "impact": "Provides affordable housing materials and services, offers education and training on home improvement and energy efficiency, and advocates for policies that support sustainable and affordable housing.",
+    "partners": [
+      "Massachusetts Affordable Housing Alliance",
+      "Green Justice Coalition",
+      "Boston Community Capital"
+    ],
+    "address": "100 Terrace St, Boston, MA 02120",
+    "email": "info@bostonbuildingresources.com",
+    "phone": "(617) 442-2262",
+    "website": "bostonbuildingresources.com",
+    "opportunities": "bostonbuildingresources.com/donate-your-time"
+  },
+  {
+    "name": "City Compost",
+    "year": 2013,
+    "area": "Zero Waste",
+    "community": "Greater Boston",
+    "description": "Composting company providing residential and commercial composting services.",
+    "impact": "Diverts organic waste from landfills and creates compost that can be used to improve soil health and reduce greenhouse gas emissions.",
+    "partners": ["Bootstrap Compost", "Save That Stuff", "MassRecycle"],
+    "address": "28 Damrell St, Boston, MA 02127",
+    "email": "info@citycompost.com",
+    "phone": "(617) 752-0008",
+    "website": "citycompost.com",
+    "opportunities": "citycompost.com/signup"
+  },
+  {
+    "name": "Alternatives for Community and Environment (ACE)",
+    "year": 1994,
+    "area": "Environmental Justice",
+    "community": "Communities of color and low-income communities",
+    "description": "Environmental justice organization promoting community empowerment and sustainability.",
+    "impact": "Works to address environmental racism and pollution, builds community resilience and leadership, and advocates for policies that support environmental justice.",
+    "partners": ["GreenRoots", "Toxics Action Center", "Mothers Out Front"],
+    "address": "2181 Washington St, Suite 302, Boston, MA 02119",
+    "email": "info@ace-ej.org",
+    "phone": "(617) 442-3343",
+    "website": "ace-ej.org",
+    "opportunities": "ace-ej.org/volunteer"
+  }
+]

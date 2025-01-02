@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map | Environmental Justice, Cambridge MA</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/098b560adc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      #mapid {
+        height: 500px;
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div>
+        <h2>🌎 BCDB</h2>
+      </div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/db.html">Database</a>
+        <a href="/map.html">Map</a>
+        <a href="/quiz.html">Quizzes</a>
+      </div>
+    </div>
+
+    <div class="inner">
+      <h2>Interactive Map of Climate Orgs in Boston</h2>
+      <p>
+        Scroll and drag to navigate the map. Tap each marker for more
+        information about each organization.
+      </p>
+      <br />
+      <div id="mapid"></div>
+    </div>
+
+    <footer>
+      <p>Copyright © 2025</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script>
+      const map = L.map("mapid").setView([42.3736, -71.1097], 11); // Adjusted zoom level from 13 to 11
+
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 18,
+      }).addTo(map);
+
+      // Fetch data from JSON file
+      fetch("data.json")
+        .then((response) => response.json())
+        .then((entries) => {
+          // Loop through each entry in the JSON data
+          entries.forEach((entry) => {
+            const { name, address, email, phone, website } = entry;
+
+            // Use the Mapbox API to geocode the address and get its latitude and longitude
+            fetch(
+              `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+                address
+              )}.json?access_token=pk.eyJ1IjoiYWR1bGNoaW5vcyIsImEiOiJjbGVzNXQwMnowem55M3lxcmllOG90cW1jIn0.AnzKFWmxg6SAbl4aywe06Q`
+            )
+              .then((response) => response.json())
+              .then((data) => {
+                if (data.features && data.features.length > 0) {
+                  const lat = data.features[0].center[1];
+                  const lng = data.features[0].center[0];
+
+                  // Add a marker to the map for this entry
+                  const marker = L.marker([lat, lng]).addTo(map);
+                  marker.bindPopup(
+                    `<b>${name}</b><br>${address}<br>Email: ${email}<br>Phone: ${phone}<br>Website: <a href="${website}" target="_blank">${website}</a>`
+                  );
+                } else {
+                  console.log(`Geocoding failed for address: ${address}`);
+                }
+              })
+              .catch((error) => console.log(`Geocoding error: ${error}`));
+          });
+        })
+        .catch((error) => console.log(`Failed to load JSON data: ${error}`));
+    </script>
+  </body>
+</html>

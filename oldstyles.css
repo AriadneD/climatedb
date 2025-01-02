@@ -1,0 +1,190 @@
+body {
+    font-size: 14px;
+    font-family: "Open Sans";
+    background: url('bg.png');
+    background-attachment: fixed;
+    padding: 0px;
+    margin: 0px;
+}
+.inner {
+	padding: 40px;
+}
+h1 {
+	font-size: 36px;
+    color: black;
+    text-align: center;
+}
+h2 {
+	font-size: 20px;
+    font-weight: normal;
+    color: rgb(69, 69, 69);
+    text-align: center;
+}
+.card {
+    background: #eee;
+	line-height: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+}
+.initiative-name {
+	color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.date-of-founding {
+	color: black;
+    font-size: 18px;
+}
+.target-community {
+	color: grey;
+}
+.focus-area {
+	color: white;
+    font-weight: 600;
+    background: #59b5a4; 
+    border-radius: 5px;
+    padding: 5px;
+}
+.contact-i {
+	color: black;
+    background: #eee; 
+    border-radius: 5px;
+    padding: 5px;
+}
+.contact-i a {
+	color: black;
+    text-decoration: none;
+    background: #eee; 
+    border-radius: 5px;
+    padding: 5px;
+}
+a.btn:link, a.btn:visited {
+    font-weight: normal;
+    border-radius: 5px;
+    padding: 12px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: ease all .6s;
+}
+a.btn:hover, a.btn:active {
+	padding: 15px 15px;
+    transition: ease all .6s;
+}
+.indigo {
+	background: #5433FF;
+    color: white;
+    border: 2px solid #5433FF;
+}
+.wht {
+	background: transparent;
+    color: #5433FF;
+    border: 2px solid #5433FF;
+}
+#filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin: 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+  border-radius: 10px;
+}
+
+#filters label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#filters select,
+#filters input[type="text"] {
+  font-size: 1em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-right: 10px;
+}
+
+#filters select:focus,
+#filters input[type="text"]:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 0 5px #3498db;
+}
+
+#filter-btn {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#filter-btn:hover {
+  background-color: #2980b9;
+}
+
+button.sb {
+    background-image: linear-gradient(to bottom right, #40E0D0, #20B2AA);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+  }
+  
+  button.sb:hover {
+    background-image: linear-gradient(to bottom right, #33C7FF, #20B2AA);
+  }
+  
+  button.sb:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(64, 224, 208, 0.5);
+  }
+
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+    padding: 1em;
+}
+
+.bubble i {
+    font-size: 3em;
+    color: #66c2a5;
+    display: block;
+    text-align:center;
+
+}
+
+.bubble {
+    background: #eee;
+    line-height: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+    height: 140px;
+    transition: ease all .6s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.bubble:hover {
+    transition: ease all .6s;
+    background: #ddd; 
+}

@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Quattrocento";
+  overflow-x: hidden;
+  background: rgb(64, 98, 68);
+}
+.nav {
+    top: 0;
+  background: #ebdec0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px;
+  color: #3a4d53;
+  position: fixed;
+  width: 100%;
+}
+h1 {
+  font-family: "Oswald";
+  font-size: 48px;
+}
+h2 {
+  font-family: "Oswald";
+  font-size: 40px;
+  line-height: 40px;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0px 20px;
+}
+.links a {
+  text-decoration: none;
+  color: rgb(48, 125, 95);
+  transition: ease all 0.6s;
+}
+.links a:hover {
+  color: rgb(30, 82, 62);
+  transition: ease all 0.6s;
+}
+.hero {
+  padding: 20px;
+  height: 620px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("/hero.png");
+  color: #3a4d53;
+}
+.hero a {
+  margin: 20px 10px;
+  padding: 14px 30px;
+  color: white;
+  background: rgb(48, 125, 95);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: ease all 0.6s;
+}
+.hero a:hover {
+  background: rgb(30, 82, 62);
+  transition: ease all 0.6s;
+}
+/* Container for the cards */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between cards */
+  padding: 40px 20px;
+}
+
+/* Individual cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 300px; /* Card width */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ebdec0;
+  text-decoration: none;
+  transition: transform 0.3s;
+  color: #3a4d53;
+}
+
+.features {
+  background: #9bc4ad;
+  padding: 40px 20px;
+  text-align: center;
+  color: #3a4d53;
+}
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card icon */
+.card i {
+  font-size: 50px; /* Icon size */
+  margin-bottom: 10px;
+  color: #3498db; /* Icon color */
+}
+.card img {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+}
+
+/* Card heading */
+.card h2 {
+  font-size: 18px;
+  font-family: "Quattrocento";
+  font-weight: 600;
+  color: #333;
+}
+
+.who {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  background: rgb(64, 98, 68);
+  color: #ebdec0;
+}
+
+.who img {
+  width: 400px;
+  border-radius: 20px;
+}
+.category {
+  margin: 15px 0px;
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+.getin {
+  background: rgb(141, 178, 182);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(141, 178, 182, 1) 0%,
+    rgba(235, 222, 192, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(141, 178, 182, 1) 0%,
+    rgba(235, 222, 192, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(141, 178, 182, 1) 0%,
+    rgba(235, 222, 192, 1) 100%
+  );
+  border-radius: 20px;
+  margin: 20px 20px;
+  text-align: center;
+  padding: 50px 20px;
+  color: #3a4d53;
+}
+.getin a {
+    margin: 20px 10px;
+    padding: 14px 30px;
+    color: white;
+    background: rgb(48, 125, 95);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: ease all 0.6s;
+  }
+  .getin a:hover {
+    background: rgb(30, 82, 62);
+    transition: ease all 0.6s;
+  }
+  .getin img {
+    height: 100px;
+    width: 100px;
+  }
+
+footer {
+  color: #ebdec0;
+  background: rgb(64, 98, 68);
+  text-align: center;
+  padding: 30px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.inner {
+    padding: 100px 20px 20px 20px;
+    text-align: center;
+    color: #ebdec0;
+}
+.quizzes {
+    background: #9bc4ad;
+    padding: 120px 20px 50px 20px;
+    text-align: center;
+    color: #3a4d53;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quiz-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+}
+.quiz-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none !important;
+    color: black;
+    background: transparent;
+    transition: ease all .6s;
+    padding: 20px;
+    border-radius: 10px;
+}
+.quiz-card:hover {
+    background:rgb(78, 173, 137);
+    transition: ease all .6s;
+}
+.quiz-card h2 {
+    width: 80%;
+    font-size: 20px;
+    text-align: left;
+    font-family: "Quattrocento";
+}
+
+.quiz-img-cont {
+    width: 200px !important;
+    height: 100px !important;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full-width on smaller screens */
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 16px; /* Adjust heading size for smaller screens */
+  }
+
+  .card i {
+    font-size: 40px; /* Adjust icon size for smaller screens */
+  }
+  .who {
+    flex-direction: column;
+  }
+  .who img {
+    width: 90%;
+  }
+}

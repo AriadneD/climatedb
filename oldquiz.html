@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Which Boston Environmental Justice Org is Your Best Match?</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/098b560adc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Environmental Justice Quiz</h1>
+<div class="inner card" style="padding: 10px 25%;">
+	<p>Answer the following questions to find the best organization match for your interests:</p>
+	<form>
+		<p>1. Which issue is most important to you?</p>
+        <input type="radio" name="issue" value="climate change"> Climate change and clean energy<br>
+        <input type="radio" name="issue" value="environmental justice"> Environmental justice and community empowerment<br>
+        <input type="radio" name="issue" value="agriculture"> Sustainable agriculture and food equity<br>
+        <input type="radio" name="issue" value="transportation"> Sustainable transportation and transit policies<br>
+
+        <p>2. Who do you think should lead the way on climate action?</p>
+        <input type="radio" name="leader" value="families"> Parents and families<br>
+        <input type="radio" name="leader" value="youth"> Youth and student-led movements<br>
+        <input type="radio" name="leader" value="grassroots"> Grassroots organizations and communities<br>
+        <input type="radio" name="leader" value="national"> National organizations and policymakers<br>
+
+        <p>3. Which approach to climate action appeals to you the most?</p>
+        <input type="radio" name="approach" value="advocacy"> Advocacy and education<br>
+        <input type="radio" name="approach" value="action"> Nonviolent direct action and civil disobedience<br>
+        <input type="radio" name="approach" value="community"> Community engagement and empowerment<br>
+        <input type="radio" name="approach" value="education"> Consumer education and resource provision<br>
+
+        <p>4. Which area of Massachusetts would you like to see environmental justice efforts focused on?</p>
+        <input type="radio" name="area" value="boston"> Greater Boston<br>
+        <input type="radio" name="area" value="chelsea"> Chelsea and East Boston<br>
+        <input type="radio" name="area" value="mystic river"> The Mystic River watershed<br>
+        <input type="radio" name="area" value="low-income"> Low-income communities across the state<br>
+
+        <p>5. Which type of environmental justice issue concerns you the most?</p>
+        <input type="radio" name="type" value="climate"> Climate change and clean energy<br>
+        <input type="radio" name="type" value="water"> Water quality and conservation<br>
+        <input type="radio" name="type" value="food"> Food access and equity<br>
+        <input type="radio" name="type" value="housing"> Sustainable housing and energy efficiency<br>
+
+        <p>6. Which mode of transportation do you think should be prioritized in the fight against climate change?</p>
+        <input type="radio" name="transportation" value="biking"> Biking and walking<br>
+        <input type="radio" name="transportation" value="transit"> Public transit and trains<br>
+        <input type="radio" name="transportation" value="electric"> Electric and hybrid vehicles<br>
+        <input type="radio" name="transportation" value="carpooling"> Carpooling and ridesharing<br>
+
+        <br/>
+		<button type="button" class="sb" onclick="submitQuiz()">Submit</button>
+	</form>
+    <p id="result"></p>
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+	<script>
+    function submitQuiz() {
+  // create an XML request object
+  const xhttp = new XMLHttpRequest();
+
+  // define the callback function
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      const organizations = parseData(this.responseText);
+      const selectedKeywords = getSelectedKeywords();
+      const result = findBestMatch(organizations, selectedKeywords);
+      displayResult(result);
+    }
+  };
+
+  // open the file and send the request
+  xhttp.open("GET", "data.csv", true);
+  xhttp.send();
+}
+
+function parseData(data) {
+  // split the data into rows and remove the header row
+  const rows = data.split("\n").slice(1);
+
+  // split each row into cells and create an object for each organization
+  const organizations = rows.map(row => {
+    const cells = row.split(",");
+    return {
+      name: cells[0],
+      keywords: cells.slice(4, 11),
+      description: cells[4],
+      impact: cells[5]
+    };
+    console.log(organizations)
+  });
+
+  return organizations;
+}
+
+function getSelectedKeywords() {
+  // get all the selected checkboxes
+  const checkboxes = document.querySelectorAll("input[type='radio']:checked");
+
+  // extract the values (which are the keywords)
+  const selectedKeywords = Array.from(checkboxes).map(checkbox => checkbox.value);
+  console.log(selectedKeywords)
+  return selectedKeywords;
+}
+
+function findBestMatch(organizations, selectedKeywords) {
+  let bestMatch;
+  let maxSimilarity = -1;
+
+  // loop through all organizations and calculate their similarity to the selected keywords
+  for (const organization of organizations) {
+    const similarity = calculateSimilarity(organization, selectedKeywords);
+    console.log(`${organization.name}: ${similarity} similar keywords`);
+    if (similarity > maxSimilarity) {
+      bestMatch = organization.name;
+      maxSimilarity = similarity;
+    }
+  }
+
+  return bestMatch;
+}
+
+function calculateSimilarity(organization, selectedKeywords) {
+  // calculate the intersection of the selected keywords and the keywords in the organization's description and impact
+  const descriptionKeywords = organization.description.split(" ");
+  const impactKeywords = organization.impact.split(" ");
+  const allKeywords = [...organization.keywords, ...descriptionKeywords, ...impactKeywords];
+  const intersection = selectedKeywords.filter(keyword => allKeywords.includes(keyword));
+
+  return intersection.length;
+}
+
+function displayResult(result) {
+  const resultElement = document.getElementById("result");
+  if (resultElement !== null) {
+    resultElement.textContent = `The organization with the most similarity is: ${result}`;
+  }
+}
+    </script>
+</body>
+</html>
