@@ -22,7 +22,7 @@
     <style>
       #mapid {
         height: 500px;
-        border-radius: 20px;
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -42,12 +42,22 @@
     <div class="inner">
       <h2>Interactive Map of Climate Orgs in Boston</h2>
       <p>
-        Scroll and drag to navigate the map. Tap each marker for more
-        information about each organization.
+        Scroll and drag to navigate the map. Tap each marker for more information
+        about each organization.
       </p>
-      <br />
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search by name or address..."
+        style="font-family: 'Quattrocento'; background: #ebdec0; width: 100%; padding: 10px 0px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ababa7;"
+      />
+      <div id="search-results" style="padding: 0px 20px; border-radius: 5px; margin-top: 5px; height: 100px; overflow-y: scroll; border: 2px solid rgb(37, 78, 51); text-align: left;">
+        <p>Search results will appear here...</p>
+      </div>
+      <br/>
       <div id="mapid"></div>
     </div>
+    
 
     <footer>
       <p>Copyright © 2025</p>
@@ -60,8 +70,7 @@
       rel="stylesheet"
     />
     <script>
-      const map = L.map("mapid").setView([42.3736, -71.1097], 11); // Adjusted zoom level from 13 to 11
-
+      const map = L.map("mapid").setView([42.3736, -71.1097], 11);
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
@@ -69,11 +78,13 @@
         maxZoom: 18,
       }).addTo(map);
 
+      let markers = []; // To store all marker objects
+      let markerData = []; // To store all marker-related data
+
       // Fetch data from JSON file
       fetch("data.json")
         .then((response) => response.json())
         .then((entries) => {
-          // Loop through each entry in the JSON data
           entries.forEach((entry) => {
             const { name, address, email, phone, website } = entry;
 
@@ -89,11 +100,23 @@
                   const lat = data.features[0].center[1];
                   const lng = data.features[0].center[0];
 
-                  // Add a marker to the map for this entry
-                  const marker = L.marker([lat, lng]).addTo(map);
-                  marker.bindPopup(
-                    `<b>${name}</b><br>${address}<br>Email: ${email}<br>Phone: ${phone}<br>Website: <a href="${website}" target="_blank">${website}</a>`
-                  );
+                  // Add marker to the map
+                  const marker = L.marker([lat, lng])
+                    .addTo(map)
+                    .bindPopup(
+                      `<b>${name}</b><br>${address}<br>Email: ${email}<br>Phone: ${phone}<br>Website: <a href="${website}" target="_blank">${website}</a>`
+                    );
+
+                  // Store marker and its associated data
+                  markers.push(marker);
+                  markerData.push({
+                    marker,
+                    name,
+                    address,
+                    email,
+                    phone,
+                    website,
+                  });
                 } else {
                   console.log(`Geocoding failed for address: ${address}`);
                 }
@@ -102,6 +125,51 @@
           });
         })
         .catch((error) => console.log(`Failed to load JSON data: ${error}`));
+
+      // Add search functionality
+      document
+        .getElementById("search-bar")
+        .addEventListener("input", (event) => {
+          const query = event.target.value.toLowerCase();
+          const resultsContainer = document.getElementById("search-results");
+
+          // Clear existing results
+          resultsContainer.innerHTML = "";
+
+          let filteredResults = markerData.filter(
+            (data) =>
+              data.name.toLowerCase().includes(query) ||
+              data.address.toLowerCase().includes(query)
+          );
+
+          if (filteredResults.length === 0) {
+            resultsContainer.innerHTML = "<p>No results found</p>";
+          } else {
+            // Show results in text and filter map markers
+            filteredResults.forEach(
+              ({ marker, name, address, email, phone, website }) => {
+                map.addLayer(marker); // Show marker
+
+                const resultItem = document.createElement("div");
+                resultItem.innerHTML = `
+        <p><b>${name}</b><br>
+        ${address}<br>
+        Email: ${email || "N/A"}<br>
+        Phone: ${phone || "N/A"}<br>
+        Website: <a href="${website}" target="_blank">${website}</a></p>
+      `;
+                resultsContainer.appendChild(resultItem);
+              }
+            );
+
+            // Hide non-matching markers
+            markers.forEach((marker, index) => {
+              if (!filteredResults.some((result) => result.marker === marker)) {
+                map.removeLayer(marker);
+              }
+            });
+          }
+        });
     </script>
   </body>
 </html>
