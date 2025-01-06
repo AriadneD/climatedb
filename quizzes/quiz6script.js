@@ -206,7 +206,7 @@ function showResult() {
       resultImage = "https://i.ibb.co/RgJQZrn/Renewable-Meme.webp"; // Replace with your correct file path or URL
       break;
     case "C":
-      resultTitle = "The Data-Driven Warrior";
+      resultTitle = "The Data Driven Warrior";
       resultDescription = "Numbers don’t lie, and neither do you. You’re the fact-checker of the climate world, and you back every claim with solid evidence.";
       resultImage = "https://i.ibb.co/QczWpmW/Data-Driven-Meme.jpg"; // Replace with your correct file path or URL
       break;
